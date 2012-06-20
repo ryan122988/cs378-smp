@@ -40,7 +40,7 @@ struct TestSMP : CppUnit::TestFixture {
         vector < vector < int > >  result(4);
         result = readTest(r, 2);
         cout<<result[0][0]<<endl;
-        CPPUNIT_ASSERT(result[0][0] == 1);
+        CPPUNIT_ASSERT(result[0][0] == "1");
         CPPUNIT_ASSERT(result[0][1] == 2);
         CPPUNIT_ASSERT(result[1][0] == 1);
         CPPUNIT_ASSERT(result[1][1] == 2);
