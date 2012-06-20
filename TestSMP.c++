@@ -82,7 +82,7 @@ struct TestSMP : CppUnit::TestFixture {
         int counter = 0;
         for(int i = 0; i < 4; ++i){
             counter = i+1;
-	    vector[i] = counter;
+	    line[i] = counter;
         }
         vector < int > result(5);
         result = generate_woman_vector(line, 4);
@@ -98,7 +98,7 @@ struct TestSMP : CppUnit::TestFixture {
         int counter = 0;
         for(int i = 0; i < 7; ++i){
             counter = i+1;
-	    vector[i] = counter;
+	    line[i] = counter;
         }
         vector < int >  result(8);
         result = generate_woman_vector(line, 7);
@@ -117,7 +117,7 @@ struct TestSMP : CppUnit::TestFixture {
         int counter = 0;
         for(int i = 0; i < 15; ++i){
             counter = i+1;
-	    vector[i] = counter;
+	    line[i] = counter;
         }
         vector < int >   result(16);
         result = generate_woman_vector(line, 15);
