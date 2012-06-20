@@ -197,11 +197,11 @@ struct TestSMP : CppUnit::TestFixture {
         men[1][2] = 2;
         men[1][3] = 1;
         men[1][4] = 1;
-        result = generate_solution(women, men, 2);
+        result = generate_solution(women, men, 3);
         CPPUNIT_ASSERT(result[0][0] == 1);
         CPPUNIT_ASSERT(result[0][1] == 1);
         CPPUNIT_ASSERT(result[1][0] == 2);
-        CPPUNIT_ASSERT(result[1][1] == 2);
+        CPPUNIT_ASSERT(result[1][1] == 2)
         CPPUNIT_ASSERT(result[2][0] == 3);
         CPPUNIT_ASSERT(result[2][1] == 3);
     
