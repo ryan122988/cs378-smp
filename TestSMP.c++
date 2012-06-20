@@ -96,10 +96,13 @@ struct TestSMP : CppUnit::TestFixture {
     void test_generate_woman2 () {
 	vector < vector < int > > line(7);
         int counter = 0;
-        for(int i = 0; i < 7; ++i){
-            counter = i+1;
-	    line[i] = counter;
-        }
+        line[0] = 1;
+        line[1] = 2;
+        line[2] = 3;
+        line[3] = 4;
+        line[4] = 5;
+        line[5] = 6;
+        line[6] = 7;
         vector < int >  result(8);
         result = generate_woman_vector(line, 7);
         CPPUNIT_ASSERT(result[0] == -1);
