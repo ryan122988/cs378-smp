@@ -56,13 +56,11 @@ vector < int > generate_woman_vector(vector < int > line, int numMarriages){
 // -------------
 // generate_solution
 // -------------
-
-/*
-  This method takes in the women and men vectors along with 
-  the total number of marriages to be determined and generates 
-  the solution for this test
-*/
 vector < vector < int > > generate_solution(vector < vector < int > > women, vector < vector < int > > men, int numMarriages){
+    /*
+    This method takes in the women vector, the men vector, and the numMarriages and 
+    generates the output
+    */
     int numUnmatchedMen = numMarriages;
     int nextChoice = -1;
     int man = -1;
@@ -152,7 +150,7 @@ void compute (std::ostream& w,vector < vector < int > > test, int numMarriages){
     for(int z = 0; z < numMarriages; z++){
         w<<output[z][0]<<" "<<output[z][1]<<endl;
     }
-
+   //return output;
 }
 
 
