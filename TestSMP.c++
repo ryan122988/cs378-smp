@@ -94,7 +94,7 @@ struct TestSMP : CppUnit::TestFixture {
     }
 
     void test_generate_woman2 () {
-        vector < int > > line(7);
+        vector < int >  line(7);
         line[0] = 1;
         line[1] = 2;
         line[2] = 3;
