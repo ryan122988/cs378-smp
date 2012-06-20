@@ -24,7 +24,7 @@ HelperMacros.h
 #include "cppunit/TextTestRunner.h" // TextTestRunner
 #include <vector>
 #include "SMP.h"
-#include <stdlib>
+#include <stdlib.h>
 
 // -----------
 // TestCollatz
