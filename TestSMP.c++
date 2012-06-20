@@ -49,7 +49,7 @@ struct TestCollatz : CppUnit::TestFixture {
 
 
 
-
+    CPPUNIT_TEST(test_readTest);
 
 
 
@@ -137,7 +137,7 @@ struct TestCollatz : CppUnit::TestFixture {
     // suite
     // -----
 
-    CPPUNIT_TEST_SUITE(TestCollatz);
+    CPPUNIT_TEST_SUITE(TestSMP);
     CPPUNIT_TEST(test_read);
     CPPUNIT_TEST(test_eval_1);
     CPPUNIT_TEST(test_eval_2);
