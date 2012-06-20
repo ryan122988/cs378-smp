@@ -36,7 +36,7 @@ struct TestCollatz : CppUnit::TestFixture {
     //
     void test_readTest () {
 	std::istream r(1, 1, 2, 2, 1, 2, 1, 1, 2, 2, 1, 2);
-        vector < vector < int > >  result = readTest(r, 2);
+        vector < vector < int > >  result(4) = readTest(r, 2);
         CPPUNIT_ASSERT(result[0][0] == 1);
         CPPUNIT_ASSERT(result[0][1] == 2);
         CPPUNIT_ASSERT(result[1][0] == 1);
