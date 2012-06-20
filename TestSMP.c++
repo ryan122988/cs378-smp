@@ -141,6 +141,25 @@ struct TestSMP : CppUnit::TestFixture {
         CPPUNIT_ASSERT(result[15] == 15);
     }
 
+    void test_generate_woman3 () {
+	vector < vector < int > > result(2);
+        vector < vector < int > > women(2);
+        vector < vector < in > > men(2);
+        women[0][0] = 1;
+        women[0][1] = 2;
+        women[1][0] = 2;
+        women[1][1] = 1;
+        men[0][0] = 1;
+        men[0][1] = 2;
+        men[1][0] = 2;
+        men[1][1] = 1;
+        result = generate_solution(women, men, 2);
+        CPPUNIT_ASSERT(result[0][0] == 1);
+        CPPUNIT_ASSERT(result[0][1] == 1);
+        CPPUNIT_ASSERT(result[1][0] == 2);
+        CPPUNIT_ASSERT(result[1][1] == 2);
+    }
+
 
 
     CPPUNIT_TEST_SUITE(TestSMP);
