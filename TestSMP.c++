@@ -36,7 +36,8 @@ struct TestSMP : CppUnit::TestFixture {
     //
     void test_readTest () {
 	std::istringstream r("1 2 1 2 1 2 1 2\n");
-        vector < vector < int > >  result(4) = readTest(r, 2);
+        vector < vector < int > >  result(4);
+        result = readTest(r, 2);
         CPPUNIT_ASSERT(result[0][0] == 1);
         CPPUNIT_ASSERT(result[0][1] == 2);
         CPPUNIT_ASSERT(result[1][0] == 1);
@@ -51,6 +52,7 @@ struct TestSMP : CppUnit::TestFixture {
 
     CPPUNIT_TEST_SUITE(TestSMP);
     CPPUNIT_TEST(test_readTest);
+    CPPUNIT_TEST_SUITE_END();
 
 };
 
