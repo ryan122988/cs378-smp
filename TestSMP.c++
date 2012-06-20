@@ -143,8 +143,10 @@ struct TestSMP : CppUnit::TestFixture {
 
     void test_generate_solution1 () {
 	vector < vector < int > > result(2);
-        vector < vector < int > > women(2) = {{-1, 1, 2}, {-1, 2, 1}};
-        vector < vector < int > > men(2) = {{-1, 1, 2, 1}, {-1, 2, 1, 1};
+        vector < vector < int > > women(2);
+        women = {{-1, 1, 2}, {-1, 2, 1}};
+        vector < vector < int > > men(2);
+        men  = {{-1, 1, 2, 1}, {-1, 2, 1, 1};
         /*women[0][0] = -1;
         women[0][1] = 1;
         women[0][2] = 2;
