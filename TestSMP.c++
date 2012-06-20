@@ -201,11 +201,11 @@ struct TestSMP : CppUnit::TestFixture {
         CPPUNIT_ASSERT(result[0][0] == 1);
         CPPUNIT_ASSERT(result[0][1] == 1);
         CPPUNIT_ASSERT(result[1][0] == 2);
-        CPPUNIT_ASSERT(result[1][1] == 2);
+        CPPUNIT_ASSERT(result[1][1] == 3);
         CPPUNIT_ASSERT(result[2][0] == 3);
-        CPPUNIT_ASSERT(result[2][1] == 3);
+        CPPUNIT_ASSERT(result[2][1] == 2);
     
-}
+    }
 
     void test_generate_solution3 () {
 	vector < vector < int > > result(2, vector < int > (2));
