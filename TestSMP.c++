@@ -78,13 +78,13 @@ struct TestSMP : CppUnit::TestFixture {
     }
 
     void test_generate_woman1 () {
-	vector < vector < int > > line(4);
+	vector < int > line(4);
         int counter = 0;
         for(int i = 0; i < 4; ++i){
             counter = i+1;
 	    vector[i] = counter;
         }
-        vector < vector < int > >  result(5);
+        vector < int > result(5);
         result = generate_woman_vector(line, 4);
         CPPUNIT_ASSERT(result[0] == -1);
         CPPUNIT_ASSERT(result[1] == 1);
@@ -100,7 +100,7 @@ struct TestSMP : CppUnit::TestFixture {
             counter = i+1;
 	    vector[i] = counter;
         }
-        vector < vector < int > >  result(8);
+        vector < int >  result(8);
         result = generate_woman_vector(line, 7);
         CPPUNIT_ASSERT(result[0] == -1);
         CPPUNIT_ASSERT(result[1] == 1);
@@ -113,13 +113,13 @@ struct TestSMP : CppUnit::TestFixture {
     }
 
     void test_generate_woman3 () {
-	vector < vector < int > > line(15);
+	vector < int > line(15);
         int counter = 0;
         for(int i = 0; i < 15; ++i){
             counter = i+1;
 	    vector[i] = counter;
         }
-        vector < vector < int > >  result(16);
+        vector < int >   result(16);
         result = generate_woman_vector(line, 15);
         CPPUNIT_ASSERT(result[0] == -1);
         CPPUNIT_ASSERT(result[1] == 1);
