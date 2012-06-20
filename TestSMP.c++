@@ -35,7 +35,7 @@ struct TestSMP : CppUnit::TestFixture {
     // -------
     // readTest
     //
-    void test_readTest () {
+    void test_readTest1 () {
 	std::istringstream r("1 1 2\n2 1 2\n1 1 2\n2 1 2\n");
         vector < vector < int > >  result(4);
         result = readTest(r, 2);
@@ -49,10 +49,105 @@ struct TestSMP : CppUnit::TestFixture {
         CPPUNIT_ASSERT(result[3][1] == 2);
     }
 
+    void test_readTest2 () {
+	std::istringstream r("1 2 1\n2 1 2\n1 2 1\n2 1 2\n");
+        vector < vector < int > >  result(4);
+        result = readTest(r, 2);
+        CPPUNIT_ASSERT(result[0][0] == 2);
+        CPPUNIT_ASSERT(result[0][1] == 1);
+        CPPUNIT_ASSERT(result[1][0] == 1);
+        CPPUNIT_ASSERT(result[1][1] == 2);
+        CPPUNIT_ASSERT(result[2][0] == 2);
+        CPPUNIT_ASSERT(result[2][1] == 1);
+        CPPUNIT_ASSERT(result[3][0] == 1);
+        CPPUNIT_ASSERT(result[3][1] == 2);
+    }
+
+    void test_readTest3 () {
+	std::istringstream r("1 1 2\n2 2 1\n1 2 1\n2 1 2\n");
+        vector < vector < int > >  result(4);
+        result = readTest(r, 2);
+        CPPUNIT_ASSERT(result[0][0] == 1);
+        CPPUNIT_ASSERT(result[0][1] == 2);
+        CPPUNIT_ASSERT(result[1][0] == 2);
+        CPPUNIT_ASSERT(result[1][1] == 1);
+        CPPUNIT_ASSERT(result[2][0] == 2);
+        CPPUNIT_ASSERT(result[2][1] == 1);
+        CPPUNIT_ASSERT(result[3][0] == 1);
+        CPPUNIT_ASSERT(result[3][1] == 2);
+    }
+
+    void test_generate_woman1 () {
+	vector < vector < int > > line(4);
+        int counter = 0;
+        for(int i = 0; i < 4; ++i){
+            counter = i+1;
+	    vector[i] = counter;
+        }
+        vector < vector < int > >  result(5);
+        result = generate_woman_vector(line, 4);
+        CPPUNIT_ASSERT(result[0] == -1);
+        CPPUNIT_ASSERT(result[1] == 1);
+        CPPUNIT_ASSERT(result[2] == 2);
+        CPPUNIT_ASSERT(result[3] == 3);
+        CPPUNIT_ASSERT(result[4] == 4);
+    }
+
+    void test_generate_woman2 () {
+	vector < vector < int > > line(7);
+        int counter = 0;
+        for(int i = 0; i < 7; ++i){
+            counter = i+1;
+	    vector[i] = counter;
+        }
+        vector < vector < int > >  result(8);
+        result = generate_woman_vector(line, 7);
+        CPPUNIT_ASSERT(result[0] == -1);
+        CPPUNIT_ASSERT(result[1] == 1);
+        CPPUNIT_ASSERT(result[2] == 2);
+        CPPUNIT_ASSERT(result[3] == 3);
+        CPPUNIT_ASSERT(result[4] == 4);
+        CPPUNIT_ASSERT(result[5] == 5);
+        CPPUNIT_ASSERT(result[6] == 6);
+        CPPUNIT_ASSERT(result[7] == 7);
+    }
+
+    void test_generate_woman3 () {
+	vector < vector < int > > line(15);
+        int counter = 0;
+        for(int i = 0; i < 15; ++i){
+            counter = i+1;
+	    vector[i] = counter;
+        }
+        vector < vector < int > >  result(16);
+        result = generate_woman_vector(line, 15);
+        CPPUNIT_ASSERT(result[0] == -1);
+        CPPUNIT_ASSERT(result[1] == 1);
+        CPPUNIT_ASSERT(result[2] == 2);
+        CPPUNIT_ASSERT(result[3] == 3);
+        CPPUNIT_ASSERT(result[4] == 4);
+        CPPUNIT_ASSERT(result[5] == 5);
+        CPPUNIT_ASSERT(result[6] == 6);
+        CPPUNIT_ASSERT(result[7] == 7);
+        CPPUNIT_ASSERT(result[8] == 8);
+        CPPUNIT_ASSERT(result[9] == 9);
+        CPPUNIT_ASSERT(result[10] == 10);
+        CPPUNIT_ASSERT(result[11] == 11);
+        CPPUNIT_ASSERT(result[12] == 12);
+        CPPUNIT_ASSERT(result[13] == 13);
+        CPPUNIT_ASSERT(result[14] == 14);
+        CPPUNIT_ASSERT(result[15] == 15);
+    }
+
 
 
     CPPUNIT_TEST_SUITE(TestSMP);
-    CPPUNIT_TEST(test_readTest);
+    CPPUNIT_TEST(test_readTest1);
+    CPPUNIT_TEST(test_readTest2);
+    CPPUNIT_TEST(test_readTest2);
+    CPPUNIT_TEST(test_generate_woman1);
+    CPPUNIT_TEST(test_generate_woman2);
+    CPPUNIT_TEST(test_generate_woman3);
     CPPUNIT_TEST_SUITE_END();
 
 };
