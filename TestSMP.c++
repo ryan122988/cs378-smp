@@ -36,7 +36,7 @@ struct TestSMP : CppUnit::TestFixture {
     // readTest
     //
     void test_readTest () {
-	std::istringstream r("1 2 1 2 1 2 1 2\n");
+	std::istringstream r("1 2\n1 2\n1 2\n1 2\n");
         vector < vector < int > >  result(4);
         result = readTest(r, 2);
         cout<<result[0][0]<<endl;
