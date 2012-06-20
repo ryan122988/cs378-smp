@@ -141,7 +141,7 @@ struct TestSMP : CppUnit::TestFixture {
         CPPUNIT_ASSERT(result[15] == 15);
     }
 
-    void test_generate_woman3 () {
+    void test_generate_solution1 () {
 	vector < vector < int > > result(2);
         vector < vector < int > > women(2);
         vector < vector < in > > men(2);
@@ -169,6 +169,7 @@ struct TestSMP : CppUnit::TestFixture {
     CPPUNIT_TEST(test_generate_woman1);
     CPPUNIT_TEST(test_generate_woman2);
     CPPUNIT_TEST(test_generate_woman3);
+    CPPUNIT_TEST(test_generate_solution1);
     CPPUNIT_TEST_SUITE_END();
 
 };
