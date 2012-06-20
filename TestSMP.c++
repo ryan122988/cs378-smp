@@ -49,6 +49,7 @@ struct TestSMP : CppUnit::TestFixture {
 
 
 
+    CPPUNIT_TEST_SUITE(TestSMP);
     CPPUNIT_TEST(test_readTest);
 
 };
