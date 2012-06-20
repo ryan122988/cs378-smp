@@ -151,7 +151,7 @@ struct TestSMP : CppUnit::TestFixture {
         women[1][0] = -1;
         women[1][1] = 2;
         women[1][2] = 1;
-        men[0][0] = -1
+        men[0][0] = -1;
         men[0][1] = 1;
         men[0][2] = 2;
         men[0][3] = 1;
