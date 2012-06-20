@@ -29,7 +29,7 @@ HelperMacros.h
 // TestCollatz
 // -----------
 
-struct TestCollatz : CppUnit::TestFixture {
+struct TestSMP : CppUnit::TestFixture {
 
     // -------
     // readTest
@@ -51,7 +51,7 @@ struct TestCollatz : CppUnit::TestFixture {
 
     CPPUNIT_TEST(test_readTest);
 
-}
+};
 
 
     /*
