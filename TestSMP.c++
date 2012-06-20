@@ -23,7 +23,7 @@ HelperMacros.h
 #include "cppunit/TestFixture.h" // TestFixture
 #include "cppunit/TextTestRunner.h" // TextTestRunner
 #include <vector>
-#include "Collatz.h"
+#include "SMP.h"
 
 // -----------
 // TestCollatz
@@ -51,7 +51,7 @@ struct TestCollatz : CppUnit::TestFixture {
 
     CPPUNIT_TEST(test_readTest);
 
-
+}
 
 
     /*
