@@ -7,8 +7,8 @@ HelperMacros.h
 ...
 % locate libcppunit.a
 /usr/lib/libcppunit.a
-% g++ -ansi -pedantic -lcppunit -ldl -Wall TestCollatz.c++ -o TestCollatz.c++.app
-% valgrind TestCollatz.c++.app >& TestCollatz.c++.out
+% g++ -ansi -pedantic -lcppunit -ldl -Wall TestSMP.c++ -o TestSMP.app
+% valgrind TestSMP.app >& TestSMP.out
 */
 
 // --------
@@ -24,6 +24,7 @@ HelperMacros.h
 #include "cppunit/TextTestRunner.h" // TextTestRunner
 #include <vector>
 #include "SMP.h"
+#include <stdlib>
 
 // -----------
 // TestCollatz
@@ -38,6 +39,7 @@ struct TestSMP : CppUnit::TestFixture {
 	std::istringstream r("1 2 1 2 1 2 1 2\n");
         vector < vector < int > >  result(4);
         result = readTest(r, 2);
+        cout<<result[0][0]<<endl;
         CPPUNIT_ASSERT(result[0][0] == 1);
         CPPUNIT_ASSERT(result[0][1] == 2);
         CPPUNIT_ASSERT(result[1][0] == 1);
