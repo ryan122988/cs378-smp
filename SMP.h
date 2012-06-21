@@ -14,6 +14,9 @@ using namespace std;
 // readTest 
 // --------------
 vector < vector < int > > readTest (std::istream& r, int numMarriages){
+    /*
+    This method reads in a test case
+    */
     int marriages = numMarriages * 2;
     vector < vector < int > > output(marriages);
     vector < int > line (numMarriages);
@@ -38,6 +41,11 @@ vector < vector < int > > readTest (std::istream& r, int numMarriages){
 // generate_woman_vector
 // -------------
 vector < int > generate_woman_vector(vector < int > line, int numMarriages){
+    /*
+    This method takes the line representing a womans
+    preferences and formats it as per the requirements for
+    computing the solution
+    */
     int size = numMarriages + 1;
     vector < int > out(size);
     out[0] = -1; 
@@ -124,6 +132,10 @@ vector < vector < int > > generate_solution(vector < vector < int > > women, vec
 // -------------
 
 void compute (std::ostream& w,vector < vector < int > > test, int numMarriages){
+    /*
+    This method calls all other methods solve this 
+    test case and then writes the output for this testcase
+    */
     vector < vector < int > > output(numMarriages);
     vector < int > woman(numMarriages+1);
     vector < vector < int > > women(numMarriages);
