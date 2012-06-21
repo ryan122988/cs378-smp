@@ -175,9 +175,9 @@ struct TestSMP : CppUnit::TestFixture {
         women[0][2] = 2;
         women[0][3] = 3;
         women[1][0] = -1;
-        women[1][1] = 2;
+        women[1][1] = 3;
         women[1][2] = 1;
-        women[1][3] = 3;
+        women[1][3] = 2;
         women[2][0] = -1;
         women[2][1] = 3;
         women[2][2] = 2;
@@ -189,8 +189,8 @@ struct TestSMP : CppUnit::TestFixture {
         men[0][4] = 1;
         men[1][0] = -1;
         men[1][1] = 2;
-        men[1][2] = 3;
-        men[1][3] = 1;
+        men[1][2] = 1;
+        men[1][3] = 3;
         men[1][4] = 1;
         men[1][0] = -1;
         men[1][1] = 3;
