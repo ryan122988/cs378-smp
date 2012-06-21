@@ -227,8 +227,7 @@ struct TestSMP : CppUnit::TestFixture {
         CPPUNIT_ASSERT(result[0][1] == 1);
         CPPUNIT_ASSERT(result[1][0] == 2);
         CPPUNIT_ASSERT(result[1][1] == 2);
-        CPPUNIT_ASSERT(result[2][0] == 3);
-        CPPUNIT_ASSERT(result[2][1] == 1);
+
     }
 
 
