@@ -192,28 +192,43 @@ struct TestSMP : CppUnit::TestFixture {
     }
  
     void test_generate_solution3 () {
-	vector < vector < int > > result(2, vector < int > (2));
-        vector < vector < int > > women(2, vector < int > (3));
-        vector < vector < int > > men(2, vector < int > (4));
+	vector < vector < int > > result(3, vector < int > (2));
+        vector < vector < int > > women(3, vector < int > (4));
+        vector < vector < int > > men(3, vector < int > (5));
         women[0][0] = -1;
         women[0][1] = 1;
         women[0][2] = 2;
+        women[0][3] = 3;
         women[1][0] = -1;
-        women[1][1] = 2;
-        women[1][2] = 1;
+        women[1][1] = 1;
+        women[1][2] = 2;
+        women[1][3] = 3;
+        women[1][0] = -1;
+        women[1][1] = 1;
+        women[1][2] = 2;
+        women[1][3] = 3;
         men[0][0] = -1;
         men[0][1] = 1;
         men[0][2] = 2;
-        men[0][3] = 1;
+        men[0][3] = 3;
+        men[0][4] = 1;
         men[1][0] = -1;
         men[1][1] = 2;
-        men[1][2] = 1;
+        men[1][2] = 3;
         men[1][3] = 1;
-        result = generate_solution(women, men, 2);
+        men[1][4] = 1;
+        men[1][0] = -1;
+        men[1][1] = 3;
+        men[1][2] = 2;
+        men[1][3] = 1;
+        men[1][4] = 1;
+        result = generate_solution(women, men, 3);
         CPPUNIT_ASSERT(result[0][0] == 1);
         CPPUNIT_ASSERT(result[0][1] == 1);
         CPPUNIT_ASSERT(result[1][0] == 2);
         CPPUNIT_ASSERT(result[1][1] == 2);
+        CPPUNIT_ASSERT(result[2][0] == 3);
+        CPPUNIT_ASSERT(result[2][1] == 3);
     }
 
 
